@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Available Donors</h1>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Blood Group</th>
+        <th>City</th>
+    </tr>
+    {% for donor in donors %}
+    <tr>
+        <td>{{ donor.name }}</td>
+        <td>{{ donor.blood_group }}</td>
+        <td>{{ donor.city }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

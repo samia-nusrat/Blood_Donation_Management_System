@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Request Blood</h1>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.blood_group.label }} {{ form.blood_group() }}<br>
+    {{ form.city.label }} {{ form.city() }}<br>
+    {{ form.submit() }}
+</form>
+{% endblock %}
